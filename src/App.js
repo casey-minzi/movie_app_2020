@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Movie from './Movie';
 
 function App() {
+
+  const [movies, setMovies] = useState([]);
+
+  const getMovies = async () => {
+    const {
+      data: {
+        data: { movies }
+      } } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+    setMovies(movies);
+  }
+
+  useEffect(() => {
+    getMovies();
+  }, [movies]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {movies.length === 0 ? 'Is Loading...' : movies.map(movie => (
+        <Movie {...movie} key={movie.id} />
+      ))}
     </div>
   );
+
 }
 
 export default App;
