@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Movie from './Movie';
+import './App.css';
 
 function App() {
 
@@ -20,9 +21,12 @@ function App() {
 
   return (
     <div className="App">
-      {movies.length === 0 ? 'Is Loading...' : movies.map(movie => (
-        <Movie {...movie} key={movie.id} />
-      ))}
+      {movies.length === 0 ?
+        <span className="loader">...is Loading</span> :
+        <div className="movies">
+          {movies.map(movie => <Movie {...movie} key={movie.id} />)}
+        </div>
+      }
     </div>
   );
 
