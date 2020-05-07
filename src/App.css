@@ -1,18 +1,7 @@
+@import 'Reset.css';
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
 
 * {
     box-sizing: border-box;
-}
-
-body,
-.App {
-    background-color: #e8e8e8;
-    font-family: 'DM Mono', monospace;
-    color: #00334e;
-}
-
-.loader {
-    height: 100vh;
-    display: grid;
-    place-content: center;
+    text-decoration: none;
 }

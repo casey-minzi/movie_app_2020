@@ -12,8 +12,20 @@
     display: flex;
     margin-bottom: 70px;
     border-radius: 10px;
+    transition: transform 1000ms 100ms;
 }
 
+.movie a {
+    display: flex;
+    text-decoration: none;
+    color: #145374
+}
+
+.movie:hover {
+    transform: scale(1.02);
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
 .movie > * {
     margin: 0 20px;
 }
@@ -60,13 +72,16 @@
     .movies {
         margin: 0 10px;
         padding: 0;
-        padding-top: 150px;
+        padding-top: 100px;
     }
 
     .movie {
         width: 100%;
-        display: grid;
         margin-bottom: 100px;
+    }
+
+    .movie a {
+        display: grid;
     }
 
     .movie img {

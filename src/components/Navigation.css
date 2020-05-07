@@ -1,0 +1,40 @@
+.Navigation {
+    display: grid;
+    row-gap: 20px;
+    position: fixed;
+    width: 100px;
+    background-color: #00334e;
+    padding: 20px 0;
+    border-radius: 10px;
+    top: 15px;
+    place-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.icon {
+    border-radius: 50%;
+    padding:10px;
+    box-shadow: -2px -2px 3px rgba(255, 255,255, 0.4),
+    3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.icon span {
+    display: flex;
+    justify-content: center;
+}
+
+.icon:hover{
+    text-shadow: 0 0 5px #ffffff;
+}
+
+@media (max-width: 640px) {
+    .Navigation {
+        z-index: 1;
+        font-size: 14px;
+        width: 80px;
+    }
+}
