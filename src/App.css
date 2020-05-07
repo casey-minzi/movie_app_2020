@@ -4,24 +4,15 @@
     box-sizing: border-box;
 }
 
-body {
+body,
+.App {
     background-color: #e8e8e8;
     font-family: 'DM Mono', monospace;
     color: #00334e;
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body,
-#root,
-.App {
-    height: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .loader {
+    height: 100vh;
     display: grid;
     place-content: center;
-  }
+}
