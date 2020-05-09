@@ -1,0 +1,15 @@
+.About .container {
+    background-color: #ffffff;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+@media (max-width: 640px) {
+    .About .container {
+        width: 90%;
+        font-size: 16px;
+    }
+}

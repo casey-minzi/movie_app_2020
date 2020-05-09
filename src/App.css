@@ -5,3 +5,19 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+body,
+.Home,
+.About,
+.Detail {
+    background-color: #e8e8e8;
+    font-family: 'DM Mono', monospace;
+    color: #00334e;
+}
+
+.About,
+.Detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

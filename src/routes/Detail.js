@@ -1,16 +1,13 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react';
+import DetailLayout from './DetailLayout';
 
-export default class Detail extends Component {
+export default function Details({ location, history }) {
 
-    componentDidMount() {
-        const { location, history } = this.props;
-        return !location.state && history.push('/');
-    }
+    useEffect(() => {
+        location.state === undefined && history.push("/");
+    });
 
-    render() {
-        const { location } = this.props;
-        return location.state ?
-            <span>{location.state.title}</span> :
-            null;
-    }
+    return (
+        (location.state && <DetailLayout {...location.state}/>) || null
+    );
 }

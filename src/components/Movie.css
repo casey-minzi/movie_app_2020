@@ -36,13 +36,14 @@
     font-size: 20px;
     margin: 0;
     padding: 14px 0;
+    font-weight: 500;
 }
 
 .movie_year,
 .movie_genres {
     font-size: 16px;
     font-weight: 300;
-    padding: 0;
+    padding-bottom: 8px;
     margin: 0;
     list-style: none;
     font-weight: 500;
