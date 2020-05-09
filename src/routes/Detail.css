@@ -10,13 +10,13 @@
 }
 
 .detail_title {
-    display: flex;
     font-size: 36px;
     font-weight: 500;
     position: relative;
     margin: 0 auto;
     top: -90%;
     text-shadow: 0px 2px 4px rgba(50, 50, 93, 0.5);
+    text-align: center;
 }
 
 .detail_data {
@@ -50,7 +50,7 @@
     }
 
     .detail_title {
-        top: -90%;
+        top: -80%;
     }
 
     .detail_data {
