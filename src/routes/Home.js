@@ -9,17 +9,21 @@ function Home() {
   const movies = useSelector(state => state.movies);
   const dispatch = useDispatch();
 
-  const getMovies = async () => {
-    const {
-      data: {
-        data: { movies }
-      } } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
-    dispatch({ type: 'UPLOAD_MOVIE_DATA', payload: movies })
+  const getMovies = () => {
+    return dispatch => {
+      axios.get("https://yts-proxy.now.sh/list_movies.json")
+        .then(res =>
+          dispatch({
+            type: "UPLOAD_MOVIE_DATA",
+            payload: res.data.data.movies
+          })
+        );
+    };
   }
 
   useEffect(() => {
-    getMovies();
-  });
+    dispatch(getMovies());
+  }, []);
 
   return (
     <div className="Home">
