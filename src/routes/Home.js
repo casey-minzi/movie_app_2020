@@ -23,7 +23,7 @@ function Home() {
 
   useEffect(() => {
     dispatch(getMovies());
-  }, []);
+  });
 
   return (
     <div className="Home">
